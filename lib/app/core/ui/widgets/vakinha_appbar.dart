@@ -9,6 +9,12 @@ class VakinhaAppbar extends AppBar {
           backgroundColor: Colors.white,
           elevation: elevation,
           centerTitle: true,
-          title: Image.asset('db728d88-0878-4e25-9308-cc88921f628a 3'),
+          title: Image.asset(
+            'assets/images/db728d88-0878-4e25-9308-cc88921f628a 2.png',
+            width: 80,
+          ),
+          iconTheme: const IconThemeData(
+            color: Colors.black,
+          ),
         );
 }
