@@ -3,8 +3,9 @@ import 'package:get/get.dart';
 import 'package:vakinha_burger_mobile/app/core/ui/widgets/vakinha_appbar.dart';
 import 'package:vakinha_burger_mobile/app/core/ui/widgets/vakinha_buttom.dart';
 import 'package:vakinha_burger_mobile/app/core/ui/widgets/vakinha_textformfield.dart';
+import 'package:vakinha_burger_mobile/app/modules/splash/splash_controller.dart';
 
-class SplashPage extends StatelessWidget {
+class SplashPage extends GetView<SplashController> {
   const SplashPage({Key? key}) : super(key: key);
 
   @override
@@ -12,7 +13,7 @@ class SplashPage extends StatelessWidget {
     return Scaffold(
       // appBar: VakinhaAppbar(),
       body: Container(
-          color: Color(0xFF140E0E),
+          color: const Color(0xFF140E0E),
           child: Stack(
             children: [
               Align(
@@ -39,7 +40,7 @@ class SplashPage extends StatelessWidget {
                     ),
                     VakinhaButtom(
                       label: 'ACESSAR',
-                      onPressed: () => Get.toNamed('/auth/login'),
+                      onPressed: () => controller.checkLogged(),
                       width: context.heightTransformer(reducedBy: 60),
                       height: 35,
                     )
