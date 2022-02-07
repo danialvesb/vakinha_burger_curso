@@ -7,7 +7,7 @@ import 'package:vakinha_burger_mobile/app/models/product_model.dart';
 import 'package:vakinha_burger_mobile/app/repositories/products/product_repository.dart';
 
 class MenuController extends GetxController with LoaderMixin, MessagesMixin {
-  ProductRepository _productRepository;
+  final ProductRepository _productRepository;
 
   final _loading = false.obs;
   final _message = Rxn<MessageModel>();
@@ -33,15 +33,15 @@ class MenuController extends GetxController with LoaderMixin, MessagesMixin {
 
   Future<void> _findAllProducts() async {
     try {
-      _loading.toggle();
+      _loading(true);
 
       final products = await _productRepository.findAll();
 
-      _loading.toggle();
+      _loading(false);
 
       menu.assignAll(products);
     } catch (e, s) {
-      _loading.toggle();
+      _loading(false);
 
       log('Erro ao buscar produtos', error: e, stackTrace: s);
 

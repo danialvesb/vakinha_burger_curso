@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vakinha_burger_mobile/app/core/ui/widgets/vakinha_appbar.dart';
+
 import 'package:vakinha_burger_mobile/app/core/ui/widgets/vakinha_buttom.dart';
-import 'package:vakinha_burger_mobile/app/core/ui/widgets/vakinha_textformfield.dart';
 import 'package:vakinha_burger_mobile/app/modules/splash/splash_controller.dart';
 
 class SplashPage extends GetView<SplashController> {

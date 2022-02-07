@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vakinha_burger_mobile/app/core/services/auth_service.dart';
+import 'package:vakinha_burger_mobile/app/core/services/shopping_card_service.dart';
 import 'package:vakinha_burger_mobile/app/modules/menu/menu_page.dart';
 import 'package:vakinha_burger_mobile/app/modules/menu/menu_bindings.dart';
 
 class HomeController extends GetxController {
+  final ShoppingCardService _shoppingCardService;
   static const NAVIGATOR_KEY = 1;
-
   final _tabIndex = 0.obs;
   final _tabs = [
     '/menu',
@@ -14,6 +15,11 @@ class HomeController extends GetxController {
     '/exit',
   ];
 
+  HomeController({
+    required ShoppingCardService shoppingCardService,
+  }) : _shoppingCardService = shoppingCardService;
+
+  int get totalProductInShoppingCard => _shoppingCardService.totalProducts;
   int get tabIndex => _tabIndex.value;
 
   set tabIndex(int index) {
@@ -37,5 +43,7 @@ class HomeController extends GetxController {
     }
 
     if (settings.name == '/order/shopping_card') {}
+
+    return null;
   }
 }

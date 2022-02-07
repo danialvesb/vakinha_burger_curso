@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:vakinha_burger_mobile/app/core/rest_client/rest_client.dart';
+
 import 'package:vakinha_burger_mobile/app/repositories/products/product_repository.dart';
 import 'package:vakinha_burger_mobile/app/repositories/products/product_repository_impl.dart';
 import './menu_controller.dart';

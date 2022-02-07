@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/utils.dart';
 
@@ -29,10 +28,10 @@ class VakinhaTextformfield extends StatelessWidget {
       decoration: InputDecoration(
         isDense: true,
         labelText: label,
-        labelStyle: TextStyle(
+        labelStyle: const TextStyle(
           color: Colors.black,
         ),
-        errorStyle: TextStyle(
+        errorStyle: const TextStyle(
           color: Colors.redAccent,
         ),
         border: OutlineInputBorder(

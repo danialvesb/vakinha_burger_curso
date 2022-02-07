@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/utils.dart';
+
 import 'package:vakinha_burger_mobile/app/core/ui/vakinha_state.dart';
 import 'package:vakinha_burger_mobile/app/core/ui/vakinha_ui.dart';
 import 'package:vakinha_burger_mobile/app/core/ui/widgets/vakinha_appbar.dart';
