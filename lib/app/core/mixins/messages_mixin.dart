@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 mixin MessagesMixin on GetxController {
+  // todo entender a diferença de rx e rxn
   void messageListener(Rxn<MessageModel> message) {
     ever<MessageModel?>(message, (model) async {
       if (model != null) {

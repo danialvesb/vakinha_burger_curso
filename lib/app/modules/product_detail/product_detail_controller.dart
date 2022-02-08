@@ -4,6 +4,7 @@ import 'package:vakinha_burger_mobile/app/core/services/shopping_card_service.da
 import 'package:vakinha_burger_mobile/app/models/product_model.dart';
 
 class ProductDetailController extends GetxController {
+  //todo estudar rx
   final _product = Rx<ProductModel>(Get.arguments);
   final _totalPrice = 0.0.obs;
   final _quantity = 1.obs;

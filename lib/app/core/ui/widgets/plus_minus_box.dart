@@ -37,6 +37,7 @@ class PlusMinusBox extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
         ),
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Visibility(
@@ -67,10 +68,11 @@ class PlusMinusBox extends StatelessWidget {
               child: const Spacer(),
             ),
             Container(
-              margin: const EdgeInsets.only(
-                left: 20,
-                right: 10,
-              ),
+              // margin: const EdgeInsets.only(
+              //   left: 20,
+              //   right: 10,
+              // ),
+              alignment: Alignment.center,
               constraints: const BoxConstraints(
                 minHeight: 70,
               ),

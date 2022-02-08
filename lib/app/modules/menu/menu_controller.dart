@@ -4,16 +4,16 @@ import 'package:get/get.dart';
 import 'package:vakinha_burger_mobile/app/core/mixins/loader_mixin.dart';
 import 'package:vakinha_burger_mobile/app/core/mixins/messages_mixin.dart';
 import 'package:vakinha_burger_mobile/app/models/product_model.dart';
-import 'package:vakinha_burger_mobile/app/repositories/products/product_repository.dart';
+import 'package:vakinha_burger_mobile/app/repositories/products/i_product_repository.dart';
 
 class MenuController extends GetxController with LoaderMixin, MessagesMixin {
-  final ProductRepository _productRepository;
+  final IProductRepository _productRepository;
 
   final _loading = false.obs;
   final _message = Rxn<MessageModel>();
   final menu = <ProductModel>[].obs;
 
-  MenuController({required ProductRepository productRepository})
+  MenuController({required IProductRepository productRepository})
       : _productRepository = productRepository;
 
   @override
